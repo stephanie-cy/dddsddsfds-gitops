@@ -1,0 +1,22 @@
+apiVersion: backstage.io/v1alpha1
+kind: Resource
+metadata:
+  name: dddsddsfds-gitops
+  description: This is GitOps manifest for dddsddsfds   
+  links:
+    - url: https://www.redhat.com/en/solutions/trusted-software-supply-chain
+      title: Trusted Secure Supply Chain 
+      icon: dashboard
+      type: admin-dashboard
+  annotations:    
+    argocd/app-name: dddsddsfds
+    janus-idp.io/tekton: dddsddsfds 
+    backstage.io/kubernetes-id: dddsddsfds
+    backstage.io/kubernetes-namespace: openshift-gitops
+    backstage.io/techdocs-ref: dir:. 
+spec:
+  type: gitops
+  owner: user:guest 
+  lifecycle: experimental
+  dependsOn:
+    - component:dddsddsfds
